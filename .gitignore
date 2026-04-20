@@ -1,0 +1,14 @@
+# Python
+Backend/venv/
+Backend/__pycache__/
+Backend/db.sqlite3
+*.pyc
+
+# Node
+Frontend/node_modules/
+Frontend/dist/
+
+# Environment Variables (NEVER commit these)
+.env
+Backend/.env
+Frontend/.env
