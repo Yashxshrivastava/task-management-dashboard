@@ -143,7 +143,9 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
+.Toastify__toast-container {
+    z-index: 9999 !important; /* Make sure this is higher than your modal's z-index */
+}
 .modal-bg { 
   position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
   background: rgba(15, 23, 42, 0.6); 
@@ -171,7 +173,7 @@ button:disabled {
 }
 .modal-box textarea {
   min-height: 100px;
-  resize: vertical; /* Allows the user to drag the text box taller if needed */
+  resize: vertical; 
 }
 
 @keyframes modalIn { 
