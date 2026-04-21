@@ -16,6 +16,7 @@ export default function TaskModal({ isOpen, onClose, onSave, formData, setFormDa
             required 
             type="text" 
             placeholder="Task Title" 
+            minLength={3}
             value={formData.title} 
             onChange={(e) => setFormData({...formData, title: e.target.value})} 
           />

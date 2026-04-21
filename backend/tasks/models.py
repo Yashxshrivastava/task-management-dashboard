@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.validators import MinLengthValidator
 # Create your models here.
 
 class Task(models.Model):
@@ -14,7 +15,7 @@ class Task(models.Model):
         ('completed', 'Completed'),
     ]
 
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, validators=[MinLengthValidator(3)])
     description = models.TextField(blank=True, null=True)
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='medium')
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
